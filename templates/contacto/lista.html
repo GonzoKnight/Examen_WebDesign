@@ -11,29 +11,32 @@
             <h1 style="width:175px;display:inline-table;">Contactos</h1><strong> ICINF </strong>
             <hr>
             <table class="table table-striped">
-                <thead>
-                  	<tr>
-                  	    <td>Nombre</td>
-	                    <td>Apellido</td>
-	                    <td>Teléfono</td>
-	                    <td>Acción</td>
-                  	</tr>
-                </thead>
-                <tbody>
-            		<tr>
-                		<td>
-                			<a href="{% url 'contacto:contacto_informacion' %}">lorem</a>
-            			</td>
-	                    <td>lorem</td>
-	                    <td>lorem</td>
-	                    <td>
-	                    	<a href="{% url 'contacto:contacto_informacion' %}" class="btn btn-primary"> 
-                      			<span class="glyphicon glyphicon-chevron-right"></span> Ver Detalles
-                      		</a>
-						</td>
-                    </tr>
-				</tbody>
-           
+              <thead>
+                	<tr>
+                    <td>ID</td>
+              	    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Teléfono</td>
+                    <td>Acción</td>
+                	</tr>
+              </thead>
+              <tbody>
+                {% for contacto in contactos %}
+                <tr>
+              		<td>{{ contacto.pk}}</td>
+                  <td>
+              			<a href="{% url 'contacto:contacto_informacion' %}">{{ contacto.nombre }}</a>
+                  </td>
+                  <td>{{ contacto.apellido }}</td>
+                  <td>{{ contacto.telefono }}</td>
+                  <td>
+                  	<a href="{% url 'contacto:contacto_informacion' %}" class="btn btn-primary"> 
+                			<span class="glyphicon glyphicon-chevron-right"></span> Ver Detalles
+                		</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
             </table>
           </div>	
       </div>

@@ -1,21 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from contacto.models import Contacto
 from django.shortcuts import render
 
 # Create your views here.
-
-def contact_list(request):
-    template_name = 'contact_list.html'
-    return render (request, template_name, {})
 
 def inicio(request):
 	template_name = 'contacto/default.html'
 	return render (request, template_name, {})
 
 def lista(request):
+	contacto = Contacto.objects.all().order_by('id')
+	contexto = {'contactos':contacto}
 	template_name = 'contacto/lista.html'
-	return render (request, template_name, {})
+	return render (request, template_name, contexto)
 
 def informacion(request):
 	template_name = 'contacto/informacion.html'

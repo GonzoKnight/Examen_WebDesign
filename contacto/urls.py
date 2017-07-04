@@ -4,10 +4,7 @@ from contacto import views
 app_name = 'contacto'
 
 urlpatterns = [
-    #url(r'^list/$', views.contact_list, name='contact_list'),
-
-	url(r'^list/$', views.contact_list, name='lista de contactos'),
-	url(r'^inicio/$', views.inicio, name='contacto_inicio'),
+    url(r'^inicio/$', views.inicio, name='contacto_inicio'),
     url(r'^noticia/$', views.noticia, name='contacto_noticia'),
     url(r'^lista/$', views.lista, name='contacto_lista'),
 	url(r'^informacion/$', views.informacion, name='contacto_informacion'),
