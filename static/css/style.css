@@ -35,3 +35,12 @@ footer p {
 .img-margin-right {
     margin-right: 20px;
 }
+
+.inline-table{
+	display: inline-table;
+	border:1px solid red;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}

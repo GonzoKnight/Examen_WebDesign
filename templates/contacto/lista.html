@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block titulo %} 	Lista Contactos {% endblock %}
+{% block content %}
+	<div class="container">
+      <div class="row">
+		<div class="col-md-12">
+			<img src="http://placehold.it/1400x200" alt="" class="img-responsive img-thumbnail">
+		</div>
+		<br>
+		<div class="col-md-12">
+            <h1 style="width:175px;display:inline-table;">Contactos</h1><strong> ICINF </strong>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                  	<tr>
+                  	    <td>Nombre</td>
+	                    <td>Apellido</td>
+	                    <td>Teléfono</td>
+	                    <td>Acción</td>
+                  	</tr>
+                </thead>
+                <tbody>
+            		<tr>
+                		<td>
+                			<a href="{% url 'contacto:contacto_informacion' %}">lorem</a>
+            			</td>
+	                    <td>lorem</td>
+	                    <td>lorem</td>
+	                    <td>
+	                    	<a href="{% url 'contacto:contacto_informacion' %}" class="btn btn-primary"> 
+                      			<span class="glyphicon glyphicon-chevron-right"></span> Ver Detalles
+                      		</a>
+						</td>
+                    </tr>
+				</tbody>
+           
+            </table>
+          </div>	
+      </div>
+    </div>
+{% endblock content %}

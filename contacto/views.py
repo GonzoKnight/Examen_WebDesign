@@ -12,3 +12,16 @@ def contact_list(request):
 def inicio(request):
 	template_name = 'contacto/default.html'
 	return render (request, template_name, {})
+
+def lista(request):
+	template_name = 'contacto/lista.html'
+	return render (request, template_name, {})
+
+def informacion(request):
+	template_name = 'contacto/informacion.html'
+	return render (request, template_name, {})
+
+#vista opcional
+def noticia(request):
+	template_name = 'contacto/noticia_detalle.html'
+	return render (request, template_name, {})

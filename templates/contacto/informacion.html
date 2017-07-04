@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block titulo %} 	Información Contacto {% endblock %}
+{% block content %}
+	<section>
+		<div class="container">
+	      <div class="row">
+				<!--img-->
+				<div class="col-xs-12 col-sm-3" style="text-algin:center;">
+					<img src="http://placehold.it/400x400" alt="" class=" img-responsive img-thumbnail">
+				</div>
+				<!--info-->
+				<div class="col-xs-12 col-sm-5">
+					<h2>Información de Contacto</h2>
+					<ul id="markdown-toc">
+						<li>
+							<span><strong>Nombre:</strong> Variable1 </span>
+						</li>
+						<li>
+							<span><strong>Email:</strong> Variable1 </span>
+						</li>
+						<li>
+							<span><strong>Teléfono:</strong> Variable1 </span>
+						</li>
+						<li>
+							<span><strong>Dirección:</strong> Variable1 </span>
+						</li>
+					</ul>
+					<h2>Formulario de Contacto</h2>
+					<form action="/action_page.php">
+						<div class="form-group">
+							<label>Nombre</label>
+							<input type="Text" maxlength="40" class="form-control" placeholder="Ingrese Nombre" name="nombre" id="nombre">
+						</div>
+						<div class="form-group">
+							<label>Apellido</label>
+							<input type="Text" maxlength="40" class="form-control" placeholder="Ingrese Apellido" name="apellido" id="apellido">
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="Email" maxlength="70" class="form-control" placeholder="Ingrese Email" name="email" id="email">
+						</div>
+						<div class="form-group">
+							<label>Teléfono</label>
+							<input type="Text" class="form-control" placeholder="Ingrese Teléfono, Ejemplo: 988654477" maxlength="9" name="telefono" id="telefono">
+						</div>
+						<div class="form-group">
+							<label>Dirección</label>
+							<textarea class="form-control" rows="5" placeholder="Ingrese Dirección" name="direccion" id="direccion"></textarea>
+						</div>
+						<button type="submit" class="btn btn-success">Enviar</button>
+						<br>
+					</form>
+				</div>
+				<br>
+				<!--map-->
+				<div class="col-xs-12 col-sm-4">
+					<div class="embed-responsive embed-responsive-4by3">
+					  	<iframe class="embed-responsive-item" 
+							width="600"
+							height="450"
+							frameborder="0" style="border:0"
+							src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR0wHaBAr7d-RaSe361SgMxJ-7GvGEkO8
+						    &q=Totoral 4987 ñuñoa Santiago Chile	" 
+						    allowfullscreen>
+						</iframe>
+					</div>	
+				</div>
+			</div>		
+		</div>
+	</section>
+{% endblock content %}
