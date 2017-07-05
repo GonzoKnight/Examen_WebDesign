@@ -13,16 +13,16 @@
 					<h2>Información de Contacto</h2>
 					<ul id="markdown-toc">
 						<li>
-							<span><strong>Nombre:</strong> Variable1 </span>
+							<span><strong>Nombre:</strong> {{ form.nombre }} </span>
 						</li>
 						<li>
-							<span><strong>Email:</strong> Variable1 </span>
+							<span><strong>Email:</strong> {{ form.email }} </span>
 						</li>
 						<li>
-							<span><strong>Teléfono:</strong> Variable1 </span>
+							<span><strong>Teléfono:</strong> {{ form.telefono }} </span>
 						</li>
 						<li>
-							<span><strong>Dirección:</strong> Variable1 </span>
+							<span><strong>Dirección:</strong> {{ form.direccion}} </span>
 						</li>
 					</ul>
 					<h2>Formulario de Contacto</h2>
@@ -60,7 +60,7 @@
 							height="450"
 							frameborder="0" style="border:0"
 							src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR0wHaBAr7d-RaSe361SgMxJ-7GvGEkO8
-						    &q=Totoral 4987 ñuñoa Santiago Chile	" 
+						    &q=' {{ form.direccion}} ' " 
 						    allowfullscreen>
 						</iframe>
 					</div>	

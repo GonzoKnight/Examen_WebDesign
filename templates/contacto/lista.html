@@ -25,7 +25,8 @@
                 <tr>
               		<td>{{ contacto.pk}}</td>
                   <td>
-              			<a href="{% url 'contacto:contacto_informacion' %}">{{ contacto.nombre }}</a>
+              			<!--<a href="{% url 'contacto:contacto_informacion' %}">{{ contacto.nombre }}</a>-->
+                    <a href="{% url 'contacto:contacto_update' contacto.id %}">{{ contacto.nombre }}</a>
                   </td>
                   <td>{{ contacto.apellido }}</td>
                   <td>{{ contacto.telefono }}</td>

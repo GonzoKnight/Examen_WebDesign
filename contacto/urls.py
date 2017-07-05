@@ -8,7 +8,11 @@ urlpatterns = [
     url(r'^noticia/$', views.noticia, name='contacto_noticia'),
     url(r'^lista/$', views.lista, name='contacto_lista'),
 	url(r'^informacion/$', views.informacion, name='contacto_informacion'),
-        
+	url(r'^update/(?P<pk>\d+)$', views.contacto_update, name='contacto_update'),
+   #url(r'^edit/(?P<pk>\d+)$', views.movie_update, name='movie_edit'),
+    
+
+
 
     #url(r'^new/$', views.movie_form, name='movie_create'),
     #url(r'^edit/(?P<pk>\d+)$', views.movie_update, name='movie_edit'),
